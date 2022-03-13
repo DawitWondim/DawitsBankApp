@@ -1,44 +1,21 @@
-import {Form,FormGroup, Label, Input, Button} from 'reactstrap'
+import './App.css'
 
 function App() {
   return (
    <>
-     <Form inline>
-       <FormGroup>
-         <Label
-             for="exampleEmail"
-             hidden
-         >
-           Email
-         </Label>
-         <Input
-             id="exampleEmail"
-             name="email"
-             placeholder="Email"
-             type="email"
-         />
-       </FormGroup>
-       {' '}
-       <FormGroup>
-         <Label
-             for="examplePassword"
-             hidden
-         >
-           Password
-         </Label>
-         <Input
-             id="examplePassword"
-             name="password"
-             placeholder="Password"
-             type="password"
-         />
-       </FormGroup>
-       {' '}
-       <Button>
-         Submit
-       </Button>
-     </Form>
-
+     <body>
+     <h1 className="title">Dawit's Bank</h1>
+     <div className="login_div">
+       <form className="login_form">
+         <h4>Username: </h4>
+         <input type="text"/> <br/>
+         <h4>Password: </h4>
+         <input type="text"/> <br/>
+         <button type="submit">Login</button>
+           <a href="#">New User? Create Account</a>
+       </form>
+     </div>
+     </body>
    </>
   );
 }
