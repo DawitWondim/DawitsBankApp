@@ -1,22 +1,20 @@
 import './App.css'
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import LoginForm from './LoginForm'
+import RegisterForm from './RegisterForm'
+import UserAccount from './UserAccount'
 
 function App() {
   return (
-   <>
-     <body>
-     <h1 className="title">Dawit's Bank</h1>
-     <div className="login_div">
-       <form className="login_form">
-         <h4>Username: </h4>
-         <input type="text"/> <br/>
-         <h4>Password: </h4>
-         <input type="text"/> <br/>
-         <button type="submit">Login</button>
-           <a href="#">New User? Create Account</a>
-       </form>
-     </div>
-     </body>
-   </>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LoginForm/>}/>
+            <Route path="/register" element={<RegisterForm/>}/>
+            <Route path="/account" element={<UserAccount/>}/>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
